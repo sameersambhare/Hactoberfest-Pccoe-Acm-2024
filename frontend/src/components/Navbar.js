@@ -4,7 +4,7 @@ import hacktober from '../images/hacktober.svg'
 import {Link} from 'react-router-dom'
 const Navbar = () => {
   return (
-    <div className='w-full text-white bg-black flex items-center md:py-[1vw] md:px-[4vw] justify-center md:gap-[2vw]'>
+    <div className='w-full text-white bg-[#00000077] flex items-center md:py-[1vw] md:px-[4vw] overflow-hidden justify-center md:gap-[2vw] fixed top-0 left-0 z-[999] md:rounded-bl-[1.6vw] md:rounded-br-[1.6vw]'>
       <img src={logo} alt="" className='w-[20vw] md:w-[4.2vw]' />
       <img src={hacktober} alt="" className='w-[20vw] md:w-[7vw]' />
       <nav>

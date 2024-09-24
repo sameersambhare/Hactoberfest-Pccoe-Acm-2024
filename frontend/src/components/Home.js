@@ -1,9 +1,11 @@
 import React from 'react'
 import Footer from './Footer'
+import Landing from './Landing'
 
 const Home = () => {
   return (
-    <div>
+    <div className='w-full min-h-screen relative'>
+      <Landing/>
       <Footer/>
     </div>
   )

@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Coming from '../images/Coming.png'
 const Landing = () => {
   return (
-    <div>Landing</div>
+    <div className='w-full h-screen bg-white relative overflow-hidden'>
+      <img src={Coming} alt="" className='w-full object-cover' />
+    </div>
   )
 }
 
