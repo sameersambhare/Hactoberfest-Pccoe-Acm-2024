@@ -37,6 +37,7 @@ router.post("/register", (req, res) => {
           teamname,
           email,
           mobile,
+          college,
           member1,
           member2,
           member3,
