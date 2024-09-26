@@ -1,7 +1,7 @@
 
 ## Local Setup
 
-To deploy this project run
+To install 
 
 ```bash
   npm i
