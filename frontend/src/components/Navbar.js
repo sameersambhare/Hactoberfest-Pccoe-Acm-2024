@@ -25,7 +25,7 @@ const Navbar = () => {
   }, []);
   return (
     <section className="w-full fixed top-0 left-0 z-[999] bg-[#000000b5]">
-      <div className="deals w-full  text-[0.9vw] text-white  py-[0.4vw] text-center">
+      <div className="deals w-full  md:text-[0.9vw] text-[1vh] text-white py-[0.4vw] text-center">
         <p className="capitalize">
           PCCOE ACM Hacktoberfest Coming Soon | {" "}
           {days < 10 ? "0" + days : days} days,{" "}
@@ -35,8 +35,8 @@ const Navbar = () => {
         </p>
       </div>
       <div className="w-full text-white flex items-center md:py-[0.5vw] md:px-[4vw] overflow-hidden justify-between md:justify-center md:gap-[2vw]  md:rounded-bl-[1.6vw] md:rounded-br-[1.6vw] px-[20px] py-[10px]">
-        <img src={logo} alt="" className="w-[15vw] md:w-[4vw]" />
-        <img src={hacktober} alt="" className="w-[22vw] md:w-[6vw]" />
+        <img src={logo} alt="" className="w-[6vh] md:w-[4vw]" />
+        <img src={hacktober} alt="" className="w-[9vh] md:w-[6vw]" />
         <nav>
           <ul className="md:flex md:text-[1.15vw] items-center justify-center md:gap-[3vw] block hidden">
             {navMenu.map((item, index) => {

@@ -15,7 +15,7 @@ const App = () => {
     <BrowserRouter>
       <div className="w-full min-h-screen relative bg-zinc-950">    
         <Navbar/>
-        <div className="w-full md:h-[7.3vw] bg-zinc-950"></div>
+        <div className="w-full md:h-[7.3vw] h-[10vh] bg-zinc-950"></div>
         <Routes>
           <Route path="/" element={<Home/>}></Route>
           <Route path="/projects" element={<Projects/>}></Route>
