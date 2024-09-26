@@ -13,10 +13,9 @@ import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="w-full min-h-screen relative bg-zinc-950">
-        <div className="md:pb-[6.1vw] pb-[72px]">
+      <div className="w-full min-h-screen relative bg-zinc-950">    
         <Navbar/>
-        </div>
+        <div className="w-full md:h-[7.3vw] bg-zinc-950"></div>
         <Routes>
           <Route path="/" element={<Home/>}></Route>
           <Route path="/projects" element={<Projects/>}></Route>
