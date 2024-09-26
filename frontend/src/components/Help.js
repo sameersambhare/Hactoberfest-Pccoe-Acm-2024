@@ -29,7 +29,7 @@ const FAQComponent = () => {
 
   const toggleFAQ = (index) => {
     if (index === openIndex) {
-      setOpenIndex(null); // Close the currently open FAQ
+      setOpenIndex(null); // Close the currently open 
     } else {
       setOpenIndex(index); // Open the clicked FAQ
     }
