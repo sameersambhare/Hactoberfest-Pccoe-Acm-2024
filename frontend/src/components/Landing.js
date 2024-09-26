@@ -36,7 +36,7 @@ const Landing = () => {
           Empowering Open-Source Innovation: Code, Collaborate, and Create. Unlock the Future with AI, Cloud, and Cutting-Edge Developer Tools.
         </p>
       </div>
-      <div className="w-full md:h-screen h-[30vh] bg-black">
+      <div className="w-full md:h-screen h-[30vh] bg-zinc-950">
         <Circular fv={fov} />
       </div>
     </div>
