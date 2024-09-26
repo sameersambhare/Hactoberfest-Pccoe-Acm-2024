@@ -1,0 +1,32 @@
+/* Transition for expanding FAQ content */
+p {
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  .open .fas {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+/* Custom Tailwind for smooth FAQ transitions */
+.item {
+    cursor: pointer;
+
+}  
+
+
+  /*
+  
+  .text {
+    transition: max-height 0.5s ease-in-out;
+    max-height: 0;
+  }
+  
+  .max-h-96 {
+    max-height: 24rem; /* Allow the FAQ text to expand 
+  } */
+
+  
+  
+
+
+
