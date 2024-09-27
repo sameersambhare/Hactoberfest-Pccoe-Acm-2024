@@ -8,7 +8,7 @@ import Leaderboard from './components/Leaderboard'
 import About from './components/About'
 import Help from './components/Help'
 import Register from './components/Register'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   return (

@@ -38,3 +38,18 @@
     }
 }
 
+
+  .neon-shadow {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 
+                0 0 10px rgba(0, 255, 0, 0.7), 
+                0 0 15px rgba(0, 255, 0, 0.9);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  }
+  
+.group:hover {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8), 
+                0 0 20px rgba(0, 255, 0, 1), 
+                0 0 30px rgba(0, 255, 0, 1); /* More intense glow on hover */
+    background-color: rgba(0, 255, 0, 0.2); 
+  } 
+    
