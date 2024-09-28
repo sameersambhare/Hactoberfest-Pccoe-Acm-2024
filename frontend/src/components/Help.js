@@ -68,7 +68,7 @@ const FAQComponent = () => {
 
   return (
     <>
-    <MatrixEffect/>
+    {/* <MatrixEffect/> */}
       <div className="container mx-auto mt-6">
         <h1 className="text-5xl font-mono text- font-bold text-green-500 text-center mb-8">
           Frequently Asked Questions
