@@ -69,8 +69,8 @@ const FAQComponent = () => {
   return (
     <>
     <MatrixEffect/>
-      <div className="container mx-auto mt-6">
-        <h1 className="text-5xl font-mono text- font-bold text-green-500 text-center mb-8">
+      <div className="container  mx-auto mt-6">
+        <h1 className="sm:text-5xl md:text-3xl  text-2xl  font-mono text- font-bold text-green-500 text-center mb-8">
           Frequently Asked Questions
         </h1>
       </div>
@@ -85,7 +85,7 @@ const FAQComponent = () => {
             onClick={() => toggleFAQ(index)}
           >
             <div className="title font-mono text-xl font-bold flex text-green-500 justify-between items-center">
-              <span className="text-[30px]">{faq.title}</span>
+              <span className="text-xl md:text-2xl">{faq.title}</span>
               <span
                 className={` fas fa-chevron-down ${
                   openIndex === index ? "rotate-180" : ""

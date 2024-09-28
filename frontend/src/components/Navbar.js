@@ -24,7 +24,7 @@ const Navbar = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section className="w-full fixed top-0 left-0 z-[999] bg-[#000000b5]">
+    <section className="w-full  backdrop-blur-lg  fixed top-0 left-0 z-[999] bg-[#000000b5]">
       <div className="deals w-full  md:text-[0.9vw] text-[1vh] text-white py-[0.4vw] text-center">
         <p className="capitalize">
           PCCOE ACM Hacktoberfest Coming Soon | {" "}
