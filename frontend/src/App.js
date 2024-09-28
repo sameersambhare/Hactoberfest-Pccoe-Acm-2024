@@ -10,9 +10,8 @@ import Help from "./components/Help";
 import Register from "./components/Register";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import LocomotiveScroll from "locomotive-scroll";
+import { Timeline } from "gsap/gsap-core";
 const App = () => {
-  const locomotiveScroll = new LocomotiveScroll();
   return (
     <BrowserRouter>
       <div className="w-full min-h-screen relative bg-zinc-950">
@@ -21,10 +20,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/projects" element={<Projects />}></Route>
-          <Route path="/schedule" element={<Schedule />}></Route>
+          <Route path="/schedule" element={<Schedule/>}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/leaderboard" element={<Leaderboard />}></Route>
-          <Route path="/register" element={<Register />}></Route>
           <Route path="/help" element={<Help />}></Route>
         </Routes>
         <ToastContainer theme="dark" />

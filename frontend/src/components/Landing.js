@@ -83,9 +83,9 @@ const Landing = () => {
       // Adjust FOV based on window width
       if (width <= 768) {
         // Mobile view
-        setFov(30); // Increase FOV for mobile
+        setFov(28); // Increase FOV for mobile
       } else {
-        setFov(25); // Default FOV for larger screens
+        setFov(24); // Default FOV for larger screens
       }
     };
 
@@ -112,7 +112,7 @@ const Landing = () => {
         <h1 className="md:text-[6vw] text-[7vh] md:font-bold md:leading-normal leading-none font-bold tracking-tighter font-['Poppins']">
           Hacktober Fest PCCOE 2024
         </h1>
-        <p className="md:text-[1.4vw] font-semibold tracking-tighter md:tracking-normal text-[1.6vh] font-['Space_Grotesk']">
+        <p className="md:text-[1.4vw] font-semibold tracking-tighter md:tracking-normal text-[1.vh] font-['Space_Mono']">
           Empowering Open-Source: Code, Collaborate, and Innovate with AI,
           Cloud, and Next-Gen Developer Tools.
         </p>

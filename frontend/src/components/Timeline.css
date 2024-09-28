@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.container {
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+    width: 50%;
+    transform: translateY(30px); 
+}
+body{
+    background-color: #000000;
+    
+}
+.container.appear {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}
+.timeline{
+    font-family: "Space Mono";
+}
+/* 00ff85 */
+.timeline::after {
+    left: 50%;
+    animation: moveline 6s linear forwards;
+}
+
+.left-img{
+    margin-left: -2px;
+    left: -18px;
+}
+.right-img{
+    right:-18px;
+}
+
+/* General styles for the text-box */
+.text-box {
+    position: relative;
+    background-color: rgba(39, 49, 41, 0.701); /* Dark green with opacity */
+    box-shadow: 1px 3px 10px rgb(28, 255, 62); /* Greenish glow shadow */
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    perspective: 1000px; /* For 3D transform perspective */
+    overflow: auto; /* Ensures shine effect stays within bounds */
+  }
+  
+  
+
+
+.text-box{
+    background-color: rgba(39, 49, 41, 0.701);
+}
+
+  /*heading- space-mono
+  text-robot-mono
+  */
+
+.img {
+    /* left:-20px; */
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    border-radius: 50%;
+    /* border: 4px solid; */
+    /* right: -23px; */
+    top: 32px;
+    border: 3px solid #00FF00;
+}
+
+.text-box {
+    box-shadow: 1px 3px 10px rgb(28, 255, 62);
+}
+
+@keyframes moveline {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .timeline {
+        margin: 50px auto;
+    }
+    .timeline::after {
+        left: 31px;
+    }
+    .container {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+    .text-box {
+        font-size: 13px;
+    }
+    .text-box small {
+        margin-bottom: 10px;
+    }
+    .right-container {
+        left: 0;
+    }
+    .left-container img, .right-container img {
+        left: 10px;
+    }
+    .left-arrow, .right-arrow {
+        border-right: 15px solid #00FF00;
+        border-left: 0;
+        left: -15px;
+    }
+}

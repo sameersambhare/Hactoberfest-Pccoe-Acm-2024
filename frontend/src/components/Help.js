@@ -71,6 +71,7 @@ const FAQComponent = () => {
     <MatrixEffect/>
       <div className="container  mx-auto mt-6">
         <h1 className="sm:text-5xl md:text-3xl  text-2xl  font-mono text- font-bold text-green-500 text-center mb-8">
+
           Frequently Asked Questions
         </h1>
       </div>
