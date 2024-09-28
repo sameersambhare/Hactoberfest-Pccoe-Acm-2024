@@ -1,0 +1,31 @@
+/* MatrixEffect.css */
+.main {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000; /* Black background */
+  color: green;
+  position: absolute; /* Ensure it's in the background */
+  top: 0;
+  left: 0;
+  z-index: 0; /* Keep z-index low to stay behind the FAQ */
+}
+
+.lines {
+  position: fixed;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: consolas;
+  transform: rotate(270deg);
+  transition: transform 2s;
+  width: 10px;
+  z-index: 0; /* Ensure matrix lines stay in the background */
+}
+
+.lines div {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(90deg, transparent 30%, black 100%);
+}

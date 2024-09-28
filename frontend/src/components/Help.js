@@ -1,29 +1,60 @@
 import React, { useState } from "react";
 import "./FAQComponent.css";
+import MatrixEffect from "./ui/MatrixEffect";
 
 const FAQComponent = () => {
   const [openIndex, setOpenIndex] = useState(null); // Set to null for no FAQ open by default
 
   const faqs = [
     {
-      title: "Introduction",
+      title: " What is Hacktoberfest ?",
       content:
-        "Welcome to the introductory section. Here, we will provide an overview of the main topics and objectives of this document. You will get familiar with the purpose and scope of what’s to come.",
+        "Hacktoberfest is an annual, month-long event hosted by DigitalOcean that encourages participation in open-source software development. Participants are encouraged to contribute to public GitHub repositories by submitting pull requests (PRs). The goal is to help both seasoned and new developers get involved in open source.",
     },
     {
-      title: "Background",
+      title: "When does Hacktoberfest take place?",
       content:
-        "In this section, we cover the background information relevant to the subject. This includes historical context, key developments, and foundational concepts that will help you understand the main content.",
+        "Hacktoberfest takes place throughout the month of October, starting on October 1st and ending on October 31st. Registration typically begins in late September.",
     },
     {
-      title: "Detailed Analysis",
+      title: " How can I participate in Hacktoberfest?",
       content:
-        "This part delves into a detailed analysis of the topic. It includes data, insights, and in-depth discussion that provides a comprehensive understanding of the subject matter.",
+        "Register on the official Hacktoberfest website." +
+        "Make four valid pull requests (PRs) to participating open-source projects on GitHub or GitLab during the month of October",
     },
     {
-      title: "Conclusion",
+      title: "What are the rules for Hacktoberfest participation?",
+      content: `1. Pull requests can be made to any public repository on GitHub or GitLab that is marked as Hacktoberfest-eligible
+              2. The PRs should be meaningful, and spammy or low-quality PRs will be marked as invalid.
+              3. Repositories can opt out of Hacktoberfest by adding a hacktoberfest topic to the repository’s metadata or marking invalid PRs as spam.`,
+    },
+    {
+      title: " Do I need to be an experienced developer to participate?",
       content:
-        "The conclusion wraps up the main points discussed and offers final thoughts. This section provides a summary of findings and potential recommendations or next steps based on the analysis.",
+        "No, Hacktoberfest is open to everyone, regardless of their experience level. It's a great opportunity for beginners to learn and contribute to open-source projects. Many projects have issues marked with “good first issue” that are suitable for newcomers.",
+    },
+    {
+      title: "Is Hacktoberfest only for developers or coders?",
+      content: `While Hacktoberfest is primarily focused on coding, contributions aren’t limited to just code. Participants can also contribute by improving documentation, creating tutorials, updating designs, or fixing bugs. Non-code contributions are encouraged as long as they follow the repository's contribution guidelines.`,
+    },
+    {
+      title: "Is Hacktoberfest only for developers or coders?",
+      content: `While Hacktoberfest is primarily focused on coding, contributions aren’t limited to just code. Participants can also contribute by improving documentation, creating tutorials, updating designs, or fixing bugs. Non-code contributions are encouraged as long as they follow the repository's contribution guidelines.`,
+    },
+    {
+      title: "How can I find repositories that are Hacktoberfest-eligible?",
+      content: `To find eligible repositories, search for projects with the hacktoberfest topic on GitHub or GitLab. Many repositories will also mark beginner-friendly issues with labels like "good first issue" or "help wanted."`,
+    },
+    {
+      title: "Are all pull requests counted toward Hacktoberfest?",
+      content: `No, not all pull requests are automatically counted. Only meaningful contributions to Hacktoberfest-eligible repositories will count. PRs labeled as invalid, spam, or that don’t adhere to the project’s contribution guidelines will not be counted toward the required four PRs.
+
+
+
+
+
+
+`,
     },
   ];
 
@@ -37,6 +68,7 @@ const FAQComponent = () => {
 
   return (
     <>
+    <MatrixEffect/>
       <div className="container mx-auto mt-6">
         <h1 className="text-5xl font-mono text- font-bold text-green-500 text-center mb-8">
           Frequently Asked Questions
