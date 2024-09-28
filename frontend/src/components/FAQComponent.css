@@ -1,32 +1,53 @@
-/* Transition for expanding FAQ content */
-p {
-    transition: max-height 0.3s ease-in-out;
-  }
-  
-  .open .fas {
-    transform: rotate(180deg);
-    transition: transform 0.3s ease;
-  }
-/* Custom Tailwind for smooth FAQ transitions */
-.item {
-    cursor: pointer;
+/* FAQ Block (Foreground) */
+.faq-block {
+  position: relative; /* Ensures it stays on top of the background */
+  z-index: 1; /* Higher than the matrix background */
+  padding: 20px;
+  background-color: white; /* FAQ background color */
+  color: black; /* FAQ text color */
+  max-width: 800px;
+  margin: 0 auto; /* Center the FAQ block horizontally */
+  top: 50px; /* Adjust to position the FAQ */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+}
 
-}  
+/* FAQ transitions for expanding content */
+.faq-block p {
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.faq-block .open .fas {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.faq-block .item {
+  cursor: pointer;
+}
+
+/* Max-height transitions for expandable FAQ text */
+.faq-block .text {
+  transition: max-height 0.5s ease-in-out;
+  max-height: 0;
+  overflow: hidden; /* Hide overflow when collapsed */
+}
+
+.faq-block .max-h-96 {
+  max-height: 24rem; /* Allow the FAQ text to expand */
+}
 
 
-  /*
-  
-  .text {
-    transition: max-height 0.5s ease-in-out;
-    max-height: 0;
-  }
-  
-  .max-h-96 {
-    max-height: 24rem; /* Allow the FAQ text to expand 
-  } */
+/* FAQComponent.css */
+.container {
+  position: relative; /* Position it relative to the matrix */
+  z-index: 10; /* Higher than MatrixEffect to make FAQ visible on top */
+}
 
-  
-  
-
-
-
+.faq-block {
+  padding: 20px;
+  background-color: white; /* FAQ background */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add some depth */
+  z-index: 10; /* Keep it high to ensure it's above the Matrix */
+}

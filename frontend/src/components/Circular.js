@@ -21,11 +21,11 @@ const Circular = ({ fv }) => {
         <EffectComposer>
           <Bloom
             mipmapBlur
-            intensity={2.4} // The bloom intensity.
+            intensity={2.0} // The bloom intensity.
             luminanceThreshold={0} // luminance threshold. Raise this value to mask out darker elements in the scene.
             luminanceSmoothing={0} // smoothness of the luminance threshold. Range is [0, 1]
           />
-          <ToneMapping adaptive />
+          <ToneMapping adaptive  />
         </EffectComposer>
       </Canvas>
       <div className="absolute top-[10%] left-1/2 -translate-x-1/2 -translate-y-1/2 gap-[1vw] text-[#ffffff7b] z-[2] text-center">
