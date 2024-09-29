@@ -6,6 +6,7 @@ import Landing2 from './Landing2'
 import StarsBackground from '../components/ui/star' 
 import ShootingStars from '../components/ui/shootStar'
 import VideoSection from './video'       
+import Certificate from './Certificate'
 
 const Home = () => {
   return (
@@ -13,9 +14,10 @@ const Home = () => {
       
       <Landing/>
       <VideoSection/>
+      <Certificate/>
       <StarsBackground />
       <ShootingStars />
-      {/* <Landing2/> */}
+      
 
       <Footer/>
     </div>
