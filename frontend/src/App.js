@@ -8,6 +8,7 @@ import About from "./components/About";
 import Help from "./components/Help";
 import Register from "./components/Register";
 import { ToastContainer, toast } from "react-toastify";
+import Leaderboard from "./components/Leaderboard";
 import "react-toastify/dist/ReactToastify.css";
 import { Timeline } from "gsap/gsap-core";
 const App = () => {
@@ -19,9 +20,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/projects" element={<Projects />}></Route>
-          <Route path="/schedule" element={<Schedule/>}></Route>
+          <Route path="/schedule" element={<Schedule />}></Route>
           <Route path="/about" element={<About />}></Route>
-          {/* <Route path="/leaderboard" element={<Leaderboard />}></Route> */}
+          <Route path="/leaderboard" element={<Leaderboard />}></Route>
           <Route path="/help" element={<Help />}></Route>
         </Routes>
         <ToastContainer theme="dark" />
