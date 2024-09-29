@@ -1,10 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { useMotionValue, useMotionTemplate, motion } from "framer-motion";
+import { FaCodePullRequest, FaCodeMerge, FaCodeFork } from "react-icons/fa6";
 
 // Utility function for combining class names
 const cn = (...classes) => classes.filter(Boolean).join(" ");
 
-export const EvervaultCard = ({ text, className }) => {
+// Function to generate random binary string
+const characters = "000110110001101100011011";
+export const generateRandomString = (length) => {
+  let result = "";
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return result;
+};
+
+export const EvervaultCard = ({ text, forks, pullRequests, mergedPRs, className }) => {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
 
@@ -19,21 +30,16 @@ export const EvervaultCard = ({ text, className }) => {
     let { left, top } = currentTarget.getBoundingClientRect();
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
-
+    
     const str = generateRandomString(1500);
     setRandomString(str);
   }
 
   return (
-    <div
-      className={cn(
-        "p-0.5 bg-transparent flex items-center justify-center w-full h-full relative",
-        className
-      )}
-    >
+    <div className={cn("p-0.5 bg-transparent flex items-center justify-center w-full h-full relative", className)}>
       <div
         onMouseMove={onMouseMove}
-        className="group/card rounded-3xl relative overflow-hidden bg-transparent flex flex-col items-center justify-center w-full h-full neon-shadow transition-all duration-300" // Added transition for smooth effect
+        className="group/card rounded-3xl relative overflow-hidden bg-transparent flex flex-col items-center justify-center w-full h-full neon-shadow transition-all duration-300"
       >
         <CardPattern mouseX={mouseX} mouseY={mouseY} randomString={randomString} />
         
@@ -51,24 +57,22 @@ export const EvervaultCard = ({ text, className }) => {
 
           {/* Icons Section */}
           <div className="flex space-x-4 mt-4">
-            <div className="flex flex-col items-center">
-              <Icon className="h-6 w-6 text-white" />
-              <span className="text-white">10</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Icon className="h-6 w-6 text-white" />
-              <span className="text-white">5</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Icon className="h-6 w-6 text-white" />
-              <span className="text-white">3</span>
-            </div>
+            <IconWrapper icon={<FaCodePullRequest className="h-6 w-6 text-white" />} count={pullRequests} />
+            <IconWrapper icon={<FaCodeMerge className="h-6 w-6 text-white" />} count={mergedPRs} />
+            <IconWrapper icon={<FaCodeFork className="h-6 w-6 text-white" />} count={forks} />
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+const IconWrapper = ({ icon, count }) => (
+  <div className="flex flex-col items-center">
+    {icon}
+    <span className="text-white">{count}</span>
+  </div>
+);
 
 export function CardPattern({ mouseX, mouseY, randomString }) {
   let maskImage = useMotionTemplate`radial-gradient(250px at ${mouseX}px ${mouseY}px, white, transparent)`;
@@ -92,29 +96,3 @@ export function CardPattern({ mouseX, mouseY, randomString }) {
     </div>
   );
 }
-
-const characters = "000110110001101100011011";
-export const generateRandomString = (length) => {
-  let result = "";
-  for (let i = 0; i < length; i++) {
-    result += characters.charAt(Math.floor(Math.random() * characters.length));
-  }
-  return result;
-};
-
-export const Icon = ({ className, ...rest }) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth="1.5"
-      stroke="currentColor"
-      className={className}
-      {...rest}
-    >
-      {/* Replace this with the appropriate SVG paths for fork, branch, and pull icons */}
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
-    </svg>
-  );
-};
