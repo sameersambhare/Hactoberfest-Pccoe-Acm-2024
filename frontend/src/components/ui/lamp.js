@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "../../lib/utils"; // Adjust the path based on your project structure
+import "./lamp.css"
 
 export function LampDemo() {
   return (
@@ -13,7 +14,7 @@ export function LampDemo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-3xl font-medium tracking-tight text-transparent sm:text-4xl md:text-6xl lg:text-7xl"
+        className="-mt-16 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-3xl font-medium tracking-tight text-transparent sm:text-4xl md:text-6xl lg:text-7xl"
       >
         Welcome <br /> Hacktober Projects
       </motion.h1>
@@ -88,7 +89,39 @@ export const LampContainer = ({ children, className }) => {
         ></motion.div>
 
         <div className="absolute inset-auto z-40 h-24 sm:h-36 md:h-44 w-full -translate-y-[8rem] sm:-translate-y-[10rem] md:-translate-y-[12.5rem] bg-slate-950"></div>
+
       </div>
+
+
+
+
+
+
+
+      <>
+ 
+      <div className="container mx-auto px-4 py-8 sm:px-6 sm:py-10 w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl">
+  <div className="btn">
+    <a className="block text-center text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-blue-500 hover:text-blue-700">
+      Join the open-source revolution this Hacktoberfest
+    </a>
+  </div>
+</div>
+
+
+
+</>
+
+
+
+
+
+
+
+
+
+
+
 
       <div className="relative z-50 flex -translate-y-48 sm:-translate-y-60 md:-translate-y-80 flex-col items-center px-5">
         {children}

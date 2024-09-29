@@ -1,0 +1,135 @@
+/* From Uiverse.io by csemszepp */ 
+.container {
+    max-width: 100%; /* Make the width flexible */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 50px auto; /* Center the container */
+    margin-top: 100px;
+}
+
+.container .btn {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 150px;
+    margin: 20px; /* Add spacing between buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out; /* Smooth transition for responsiveness */
+}
+
+.container .btn a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 10px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    overflow: hidden;
+    color: #fff;
+    font-weight: 400px;
+    z-index: 1;
+    transition: 0.5s;
+    backdrop-filter: blur(15px);
+}
+
+.container .btn:hover a {
+    letter-spacing: 3px;
+}
+
+.container .btn a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(45deg) translate(0);
+    transition: 0.5s;
+    filter: blur(0px);
+}
+
+.container .btn:hover a::before {
+    transform: skewX(45deg) translate(200px);
+}
+
+.container .btn::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    background: #f00;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0.5;
+}
+
+.container .btn:hover::before /*lightup button*/ {
+    bottom: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+}
+
+.container .btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    top: -5px;
+    width: 30px;
+    height: 10px;
+    background: #f00;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0.5;
+}
+
+.container .btn:hover::after /*lightup button*/ {
+    top: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+}
+
+.container .btn:nth-child(1)::before,
+.container .btn:nth-child(1)::after {
+    background: #1eff45;
+    box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45,
+          0 0 60px #1eff45;
+}
+
+/* Media Queries for Mobile View */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container .btn {
+        width: 90%; /* Adjust width for smaller screens */
+        height: 120px; /* Adjust height for mobile */
+    }
+
+    .container .btn a {
+        font-size: 14px; /* Reduce font size on mobile */
+    }
+}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import leaderboardData from './leaderboardData';
 import './Leaderboard.css';
 
@@ -73,7 +73,7 @@ const Leaderboard = () => {
           className="p-2 rounded bg-gray-700 text-white pl-10"
         />
         <div className="absolute top-2 left-2">
-          <FontAwesomeIcon icon={faSearch} className="h-5 w-5 text-gray-400" />
+          {/* <FontAwesomeIcon icon={faSearch} className="h-5 w-5 text-gray-400" /> */}
         </div>
       </div>
 
