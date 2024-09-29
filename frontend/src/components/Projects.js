@@ -66,7 +66,7 @@ const Projects = () => {
       {/* Project Cards */}
       <div className="mt-12 flex gap-6 flex-wrap justify-center space-x-4">
         {projects.map((project, index) => (
-          <div key={index} className="card w-full sm:w-[300px] h-[400px] mb-4">
+          <div key={index} className="card w-full sm:w-[300px] h-[400px] md:px-0 mb-4 px-[8vh]">
             <EvervaultCard
               text={`Project: ${project.name}`}
               forks={`Forks: ${project.forks}`}

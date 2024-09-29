@@ -28,7 +28,7 @@ const Circular = ({ fv }) => {
           <ToneMapping adaptive  />
         </EffectComposer>
       </Canvas>
-      <div className="absolute top-[10%] left-1/2 -translate-x-1/2 -translate-y-1/2 gap-[1vw] text-[#ffffff7b] z-[2] text-center">
+      <div className="absolute top-[15%] md:top-[10%] left-1/2 -translate-x-1/2 -translate-y-1/2 gap-[1vw] text-[#ffffff7b] z-[2] text-center">
         <h1 className="md:text-[3vw] text-[1.7vh] font-semibold tracking-tighter">
           Join the Open-Source Revolution
         </h1>

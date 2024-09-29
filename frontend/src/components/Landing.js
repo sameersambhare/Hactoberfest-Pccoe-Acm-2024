@@ -49,11 +49,9 @@ const Landing = () => {
           Cloud, and Next-Gen Developer Tools.
         </p>
       </div>
-      <div className="w-full md:h-screen h-[30vh] bg-zinc-950 relative z-10">
+      <div className="w-full md:h-screen h-[50vh] bg-black relative z-10">
         <Circular fv={fov} />
       </div>
-
-      {/* Circular component */}
     </div>
   );
 };
