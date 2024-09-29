@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import leaderboardData from './leaderboardData';
-import './Leaderboard.css';
+import leaderboardData from "./leaderboardData";
+import axios from "axios";
+import "./Leaderboard.css";
 
 const Leaderboard = () => {
+  const GITHUB_API_URL = "https://api.github.com/search/issues";
   const [searchTerm, setSearchTerm] = useState("");
   const [leaderboardData, setLeaderboardData] = useState([]);
   const [loading, setLoading] = useState(true);
