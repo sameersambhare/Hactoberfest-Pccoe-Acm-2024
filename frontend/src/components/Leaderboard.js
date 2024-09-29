@@ -169,6 +169,7 @@ const Leaderboard = () => {
   );
 };
 export default Leaderboard;
+
 const characters = "000110110001101100011011";
 export const generateRandomString = (length) => {
   let result = "";

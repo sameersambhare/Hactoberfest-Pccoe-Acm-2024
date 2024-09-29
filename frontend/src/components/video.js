@@ -21,20 +21,22 @@ const VideoSection = () => {
   return (
     <section
       id="video-section"
-      className={`bg-dark py-16 md:py-20 lg:py-28 transform transition-opacity duration-1000 ease-out ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
+      className={`bg-zinc-950 py-16 md:py-20 lg:py-28 transform transition-opacity duration-1000 ease-out ${isVisible ? "opacity-100" : "opacity-0"
+        }`}
     >
-      <div className="w-full h-[40vh] md:h-[70vh] container justify-center items-center flex flex-col text-center">
-        <h2 className="text-4xl font-bold text-white mb-6">
-          Our Journey in Action
-        </h2>
-        <p className="text-lg text-gray-300 mb-8 font-['Space_Mono']">
-          Watch how our community is building, learning, and innovating!
-        </p>
-
-        <div className="w-full relative flex items-center justify-center mb-12 max-w-[800px]">
-          <div className="video-wrapper  w-[900px] relative overflow-hidden rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105">
+      <div className="w-full h-[40vh]  md:h-full relative justify-center items-center flex flex-col md:py-[2vw] overflow-hidden">
+        {/*----------------------- Heading------------------------ */}
+        <div className="header-text items-center justify-center flex flex-col gap-[2vw] md:px-0 text-center px-[2vh]">
+          <h2 className="md:text-5xl text-[3.8vh] font-bold text-white">
+            Our Journey in Action
+          </h2>
+          <p className="md:text-lg text-gray-300 text-[1.8vh] font-['Space_Mono']">
+            Watch how our community is building, learning, and innovating!
+          </p>
+        </div>
+        {/*------------------------------- Video-------------------------------------------------*/}
+        <div className="w-full justify-center items-center flex md:px-0 my-[2vw] px-[2vh]">
+          <div className="video-wrapper md:w-[900px] relative overflow-hidden rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105">
             <video
               className="w-full h-full md:h-[500px] rounded-lg"
               src="/HacktoberFestVideo.mp4" // Correct path reference to the video file
@@ -43,6 +45,7 @@ const VideoSection = () => {
             />
           </div>
         </div>
+
       </div>
     </section>
   );

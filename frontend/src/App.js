@@ -15,7 +15,7 @@ import { Timeline } from "gsap/gsap-core";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="w-full min-h-screen relative bg-zinc-950">
+      <div className="w-full min-h-screen relative bg-zinc-950 overflow-hidden">
         <Navbar />
         <div className="w-full md:h-[7.3vw] h-[10vh] bg-zinc-950"></div>
         <Routes>
