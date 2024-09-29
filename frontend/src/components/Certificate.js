@@ -3,13 +3,13 @@ import TestImage from '../images/TestImage.jpeg'; // Adjust the path as necessar
 
 const Certificate = () => {
   return (
-    <div className="flex w-full justify-center  h-[40vh]">
-      <div className='flex h-[300px] content-center flex-wrap justify-between felx-col gap-5'>
+    <div className="flex w-full justify-center align-middle h-[90vh]">
+      <div className='flex w-full h-full items-center justify-center flex-col align-middle gap-20 felx-col gap-5'>
         <div>
-          <h1 className="text-white text-[60px]">CERTIFICATE</h1>
+          <h1 className="text-white font-semibold font-bold text-[60px]">Certificate</h1>
         </div>
-        <div>
-          <img src={TestImage} alt="Certificate" />
+        <div className='w-full items-center flex justify-center h-fit'>
+          <img src={TestImage} alt="Certificate" width={"800px"}/>
         </div>
       </div>
     </div>

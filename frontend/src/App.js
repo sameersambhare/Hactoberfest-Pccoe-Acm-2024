@@ -11,7 +11,9 @@ import Register from "./components/Register";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Timeline } from "gsap/gsap-core";
-import '@fortawesome/fontawesome-svg-core/styles.css';
+// import '@fortawesome/fontawesome-svg-core/styles.css';
+
+
 const App = () => {
   return (
     <BrowserRouter>
