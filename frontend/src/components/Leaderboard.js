@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import axios from 'axios';
-import './Leaderboard.css';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "./Leaderboard.css";
 
-const GITHUB_API_URL = 'https://api.github.com/search/issues';
+const GITHUB_API_URL = "https://api.github.com/search/issues";
 
 const Leaderboard = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [leaderboardData, setLeaderboardData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [orgName] = useState('pccoe-acm-hacktoberfest-2023'); // Set the organization name you want to track
+  const [orgName] = useState("pccoe-acm-hacktoberfest-2023"); // Set the organization name you want to track
 
   // Fetch the users with the highest number of merged pull requests for a specific organization
   useEffect(() => {
@@ -22,7 +20,6 @@ const Leaderboard = () => {
             q: `is:pr is:merged org:${orgName}`, // Search for merged PRs within the organization
             per_page: 100, // Get 100 results per page
           },
-          
         });
 
         const prData = response.data.items;
@@ -31,19 +28,25 @@ const Leaderboard = () => {
         const userPRCount = prData.reduce((acc, pr) => {
           const userName = pr.user.login;
           if (!acc[userName]) {
-            acc[userName] = { name: userName, avatar: pr.user.avatar_url, prCount: 0 };
+            acc[userName] = {
+              name: userName,
+              avatar: pr.user.avatar_url,
+              prCount: 0,
+            };
           }
           acc[userName].prCount += 1;
           return acc;
         }, {});
 
         // Convert to array and sort by PR count
-        const leaderboardArray = Object.values(userPRCount).sort((a, b) => b.prCount - a.prCount);
+        const leaderboardArray = Object.values(userPRCount).sort(
+          (a, b) => b.prCount - a.prCount
+        );
 
         setLeaderboardData(leaderboardArray);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching data from GitHub:', error);
+        console.error("Error fetching data from GitHub:", error);
         setLoading(false);
       }
     };
@@ -52,7 +55,7 @@ const Leaderboard = () => {
   }, [orgName]); // Re-run if orgName changes
 
   // Filter users based on the search term
-  const filteredLeaderboard = leaderboardData.filter(user =>
+  const filteredLeaderboard = leaderboardData.filter((user) =>
     user.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -76,7 +79,9 @@ const Leaderboard = () => {
               className="w-24 h-24 bg-gray-700 rounded-full mb-4"
             />
             <h2 className="text-xl font-bold">{topThree[1].name}</h2>
-            <p className="text-lg font-bold">PRs Merged: {topThree[1].prCount}</p>
+            <p className="text-lg font-bold">
+              PRs Merged: {topThree[1].prCount}
+            </p>
             <p className="text-lg">Rank #2</p>
           </div>
         )}
@@ -90,7 +95,9 @@ const Leaderboard = () => {
               className="w-24 h-24 bg-gray-700 rounded-full mb-4"
             />
             <h2 className="text-xl font-bold">{topThree[0].name}</h2>
-            <p className="text-lg font-bold">PRs Merged: {topThree[0].prCount}</p>
+            <p className="text-lg font-bold">
+              PRs Merged: {topThree[0].prCount}
+            </p>
             <p className="text-lg">Rank #1</p>
           </div>
         )}
@@ -104,24 +111,12 @@ const Leaderboard = () => {
               className="w-24 h-24 bg-gray-700 rounded-full mb-4"
             />
             <h2 className="text-xl font-bold">{topThree[2].name}</h2>
-            <p className="text-lg font-bold">PRs Merged: {topThree[2].prCount}</p>
+            <p className="text-lg font-bold">
+              PRs Merged: {topThree[2].prCount}
+            </p>
             <p className="text-lg">Rank #3</p>
           </div>
         )}
-      </div>
-
-      {/* Search Bar with Icon */}
-      <div className="mb-4 relative">
-        <input
-          type="text"
-          placeholder="Search by name..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="p-2 rounded bg-gray-700 text-white pl-10"
-        />
-        <div className="absolute top-2 left-2">
-          <FontAwesomeIcon icon={faSearch} className="h-5 w-5 text-gray-400" />
-        </div>
       </div>
 
       {/* Leaderboard Table for Other Players */}
@@ -141,7 +136,7 @@ const Leaderboard = () => {
                 key={user.name}
                 className="border-b border-gray-700 transition duration-300 ease-in-out transform hover:bg-gray-600 hover:scale-105 hover:shadow-lg hover:shadow-green-500/50"
               >
-                <td className="p-3 text-sm">{index +1}</td>
+                <td className="p-3 text-sm">{index + 1}</td>
                 <td className="p-3 text-sm">
                   <img
                     src={user.avatar}
@@ -159,7 +154,6 @@ const Leaderboard = () => {
     </div>
   );
 };
-
 export default Leaderboard;
 const characters = "000110110001101100011011";
 export const generateRandomString = (length) => {

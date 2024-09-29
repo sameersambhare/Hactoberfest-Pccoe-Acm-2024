@@ -4,24 +4,23 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
 import Schedule from "./components/Schedule";
-import Leaderboard from "./components/Leaderboard";
 import About from "./components/About";
 import Help from "./components/Help";
 import Register from "./components/Register";
 import { ToastContainer, toast } from "react-toastify";
+import Leaderboard from "./components/Leaderboard";
 import "react-toastify/dist/ReactToastify.css";
 import { Timeline } from "gsap/gsap-core";
-import '@fortawesome/fontawesome-svg-core/styles.css';
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="w-full min-h-screen relative bg-zinc-950">
+      <div className="w-full min-h-screen relative bg-zinc-950 overflow-hidden">
         <Navbar />
         <div className="w-full md:h-[7.3vw] h-[10vh] bg-zinc-950"></div>
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/projects" element={<Projects />}></Route>
-          <Route path="/schedule" element={<Schedule/>}></Route>
+          <Route path="/schedule" element={<Schedule />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/leaderboard" element={<Leaderboard />}></Route>
           <Route path="/help" element={<Help />}></Route>
