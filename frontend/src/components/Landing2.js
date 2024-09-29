@@ -98,4 +98,5 @@ const Landing2 = () => {
   );
 };
 
+
 export default Landing2;

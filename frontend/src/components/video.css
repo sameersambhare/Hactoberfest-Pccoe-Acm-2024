@@ -1,0 +1,17 @@
+#video-section {
+    transition: opacity 1s ease-out;
+  }
+  
+  .video-wrapper {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  .video-wrapper:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s;
+  }
+  
+  .video-wrapper:hover .overlay {
+    opacity: 0.3;
+  }
+  
