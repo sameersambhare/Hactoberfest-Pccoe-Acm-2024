@@ -35,12 +35,14 @@ const VideoSection = () => {
           </p>
         </div>
         {/*------------------------------- Video-------------------------------------------------*/}
-        <div className="w-full justify-center items-center flex md:px-0 my-[2vw] px-[2vh]">
+        <div className="w-full justify-center items-center md:mt-[2vw] flex md:px-0 mt-[4vh] px-[2vh]">
           <div className="video-wrapper md:w-[900px] relative overflow-hidden rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105">
             <video
               className="w-full h-full md:h-[500px] rounded-lg"
-              src="/HacktoberFestVideo.mp4" // Correct path reference to the video file
+              src="/HacktoberFestVideo.mp4" typeof="video/mp4" // Correct path reference to the video file
               controls
+              muted
+              loop
               autoPlay
             />
           </div>
