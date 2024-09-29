@@ -155,3 +155,11 @@ const Leaderboard = () => {
   );
 };
 export default Leaderboard;
+const characters = "000110110001101100011011";
+export const generateRandomString = (length) => {
+  let result = "";
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return result;
+};
