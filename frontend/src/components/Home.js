@@ -17,8 +17,6 @@ const Home = () => {
       <Certificate/>
       <StarsBackground />
       <ShootingStars />
-      
-
       <Footer/>
     </div>
   );
