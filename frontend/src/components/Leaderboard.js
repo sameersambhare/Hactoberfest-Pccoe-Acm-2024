@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import "./Leaderboard.css";
-
-const GITHUB_API_URL = "https://api.github.com/search/issues";
+import React, { useState } from 'react';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import leaderboardData from './leaderboardData';
+import './Leaderboard.css';
 
 const Leaderboard = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -119,7 +119,21 @@ const Leaderboard = () => {
         )}
       </div>
 
-      {/* Leaderboard Table for Other Players */}
+      {/* Search Bar with Icon */}
+      <div className="mb-4 relative">
+        <input
+          type="text"
+          placeholder="Search by name..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="p-2 rounded bg-gray-700 text-white pl-10"
+        />
+        <div className="absolute top-2 left-2">
+          {/* <FontAwesomeIcon icon={faSearch} className="h-5 w-5 text-gray-400" /> */}
+        </div>
+      </div>
+
+      {/* Other Players */}
       <div className="w-full max-w-4xl bg-gray-800 rounded-lg p-4 overflow-x-auto">
         <table className="min-w-full table-auto">
           <thead className="bg-gray-700">

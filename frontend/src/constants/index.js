@@ -13,23 +13,31 @@ export const eventsList = [
     eventName: "Git session ",
     eventDescription:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero aliquid necessitatibus quo ex nesciunt corrupti corporis! Consequuntur temporibus unde qui placeat, accusamus numquam maiores delectus, rem, dolorem fugit officiis necessitatibus.",
+      image: "./hacktober.jpeg",
+      link: "https://www.youtube.com"
   },
   {
     eventTime: "1 October 2024",
     eventName: "Figma Session",
     eventDescription:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero aliquid necessitatibus quo ex nesciunt corrupti corporis! Consequuntur temporibus unde qui placeat, accusamus numquam maiores delectus, rem, dolorem fugit officiis necessitatibus.",
+      image: "./hacktober.jpeg",
+      link: "#"
   },
   {
     eventTime: "1 October 2024",
     eventName: "Design And Develope",
     eventDescription:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero aliquid necessitatibus quo ex nesciunt corrupti corporis! Consequuntur temporibus unde qui placeat, accusamus numquam maiores delectus, rem, dolorem fugit officiis necessitatibus.",
+      image: "./hacktober.jpeg",
+      link: "#"
   },
   {
     eventTime: "1 October 2024",
     eventName: "Game Dev Workshop",
     eventDescription:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero aliquid necessitatibus quo ex nesciunt corrupti corporis! Consequuntur temporibus unde qui placeat, accusamus numquam maiores delectus, rem, dolorem fugit officiis necessitatibus.",
+      image: "./hacktober.jpeg",
+      link: "#"
   },
 ];
