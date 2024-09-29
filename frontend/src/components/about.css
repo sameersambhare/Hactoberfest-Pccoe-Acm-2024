@@ -1,0 +1,35 @@
+
+/* AboutPage.css */
+
+.bg-dark {
+    background-color: #121212; /* Dark background */
+  }
+  
+  .text-green-400 {
+    color: #34D399; /* Tailwind green */
+  }
+  
+  .text-gray-300 {
+    color: #D1D5DB; /* Tailwind gray */
+  }
+  
+  .drop-shadow-three {
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  a:hover {
+    background-color: #065F46; /* Darker green for hover */
+  }
+  
+  @media (max-width: 768px) {
+    .lg\:w-1\/2 {
+      width: 100%;
+    }
+  }
+  
