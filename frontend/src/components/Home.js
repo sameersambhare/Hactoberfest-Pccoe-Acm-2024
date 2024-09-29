@@ -14,7 +14,7 @@ const Home = () => {
       {/* <Landing2/> */}
       <Footer/>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
