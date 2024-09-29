@@ -39,7 +39,7 @@ const VideoSection = () => {
           <div className="video-wrapper md:w-[900px] relative overflow-hidden rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105">
             <video
               className="w-full h-full md:h-[500px] rounded-lg"
-              src="/HacktoberFestVideo.mp4" typeof="video/mp4" // Correct path reference to the video file
+              src="/HacktoberFestVideo.mp4" type="video/mp4" // Correct path reference to the video file
               controls
               muted
               loop
