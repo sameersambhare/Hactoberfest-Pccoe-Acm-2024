@@ -34,7 +34,7 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className="w-full   bg-opacity-10 bg-zinc-950 text-green-700 relative overflow-hidden">
+    <div className="w-full   bg-opacity-10 bg-zinc-950 text-[#34D399] relative overflow-hidden">
       {/* Background Animation - Positioned absolutely to cover the full background */}
       <div className="absolute h-[300px] inset-0 z-0">
         <MatrixEffect/>

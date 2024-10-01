@@ -60,23 +60,22 @@ const FAQComponent = () => {
 
   const toggleFAQ = (index) => {
     if (index === openIndex) {
-      setOpenIndex(null); // Close the currently open 
+      setOpenIndex(null); // Close the currently open
     } else {
       setOpenIndex(index); // Open the clicked FAQ
     }
   };
 
   return (
-    <>
-    <MatrixEffect/>
-      <div className="container  mx-auto mt-6">
+    <div className="xl:my-3 pt-[4vh]">
+      {/* <MatrixEffect /> */}
+      <div className="container mx-auto">
         <h1 className="sm:text-5xl md:text-3xl  text-2xl  font-mono text- font-bold text-green-500 text-center mb-8">
-
           Frequently Asked Questions
         </h1>
       </div>
 
-      <div className="container transition ease-in-out duration-500 border max-w-[60%] rounded-lg border-green-400 mt-10 h-fit p-8 mx-auto text-zinc-700 flex-col divide-y-2 divide-solid divide-red-600 divide-opacity-5">
+      <div className="container transition ease-in-out duration-500 border max-w-[60%] rounded-lg border-green-400 mt-6 h-fit p-8 mx-auto text-zinc-700 flex-col divide-y-2 divide-solid divide-red-600 divide-opacity-5">
         {faqs.map((faq, index) => (
           <div
             key={index}
@@ -114,7 +113,7 @@ const FAQComponent = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
