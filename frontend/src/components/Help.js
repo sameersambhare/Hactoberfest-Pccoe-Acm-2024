@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./FAQComponent.css";
 import MatrixEffect from "./ui/MatrixEffect";
-
+import { Helmet } from "react-helmet-async";
 const FAQComponent = () => {
   const [openIndex, setOpenIndex] = useState(null); // Set to null for no FAQ open by default
 
@@ -67,53 +67,70 @@ const FAQComponent = () => {
   };
 
   return (
-    <div className="xl:my-3 pt-[4vh]">
-      {/* <MatrixEffect /> */}
-      <div className="container mx-auto">
-        <h1 className="sm:text-5xl md:text-3xl  text-2xl  font-mono text- font-bold text-green-500 text-center mb-8">
-          Frequently Asked Questions
-        </h1>
-      </div>
+    <>
+      <Helmet>
+        <title>Hacktoberfest FAQs | Open Source Contribution Guide</title>
+        <meta
+          name="description"
+          content="Frequently Asked Questions about Hacktoberfest. Learn how to participate in open-source projects during this month-long event and make meaningful contributions."
+        />
+        <meta
+          name="keywords"
+          content="Hacktoberfest, FAQs, open source, GitHub, GitLab, pull requests, contributions"
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://yourdomain.com/faq" />
+      </Helmet>
+      <div className="xl:my-3 pt-[4vh]">
+        {/* <MatrixEffect /> */}
+        <div className="container mx-auto">
+          <h1 className="sm:text-5xl md:text-3xl  text-2xl  font-mono text- font-bold text-green-500 text-center mb-8">
+            Frequently Asked Questions
+          </h1>
+        </div>
 
-      <div className="container transition ease-in-out duration-500 border max-w-[60%] rounded-lg border-green-400 mt-6 h-fit p-8 mx-auto text-zinc-700 flex-col divide-y-2 divide-solid divide-red-600 divide-opacity-5">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className={`item p-4 flex flex-col ${
-              openIndex === index ? "open" : ""
-            }`}
-            onClick={() => toggleFAQ(index)}
-          >
-            <div className="title font-mono text-xl font-bold flex text-green-500 justify-between items-center">
-              <span className="text-xl md:text-2xl">{faq.title}</span>
-              <span
-                className={` fas fa-chevron-down ${
-                  openIndex === index ? "rotate-180" : ""
-                }`}
-              ></span>
-            </div>
-
-            <p
-              className={`text-white text-xl bg-green-500 bg-opacity-20 p-3 rounded-md font-mono transition-all duration-500 ease-in-out ${
-                openIndex === index
-                  ? "max-h-[1000px] opacity-100"
-                  : "max-h-0 opacity-0"
-              } overflow-hidden`}
-              style={{
-                maxHeight:
-                  openIndex === index ? `${faq.content.length + 100}px` : "0px",
-                transition: "max-height 0.5s ease-in-out",
-              }}
+        <div className="container transition ease-in-out duration-500 border max-w-[60%] rounded-lg border-green-400 mt-6 h-fit p-8 mx-auto text-zinc-700 flex-col divide-y-2 divide-solid divide-red-600 divide-opacity-5">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className={`item p-4 flex flex-col ${
+                openIndex === index ? "open" : ""
+              }`}
+              onClick={() => toggleFAQ(index)}
             >
-              {faq.content}
-            </p>
-            <div className="bg-green-500 h-[0.3px]">
-              <br />
+              <div className="title font-mono text-xl font-bold flex text-green-500 justify-between items-center">
+                <span className="text-xl md:text-2xl">{faq.title}</span>
+                <span
+                  className={` fas fa-chevron-down ${
+                    openIndex === index ? "rotate-180" : ""
+                  }`}
+                ></span>
+              </div>
+
+              <p
+                className={`text-white text-xl bg-green-500 bg-opacity-20 p-3 rounded-md font-mono transition-all duration-500 ease-in-out ${
+                  openIndex === index
+                    ? "max-h-[1000px] opacity-100"
+                    : "max-h-0 opacity-0"
+                } overflow-hidden`}
+                style={{
+                  maxHeight:
+                    openIndex === index
+                      ? `${faq.content.length + 100}px`
+                      : "0px",
+                  transition: "max-height 0.5s ease-in-out",
+                }}
+              >
+                {faq.content}
+              </p>
+              <div className="bg-green-500 h-[0.3px]">
+                <br />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
