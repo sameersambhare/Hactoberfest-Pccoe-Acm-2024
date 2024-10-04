@@ -6,7 +6,7 @@ export const navMenu = [
   { id: "Leaderboard", url: "/leaderboard" },
   { id: "Help", url: "/help" },
 ];
-
+//Events Data
 export const eventsList = [
   {
     eventTime: "1 October 2024",

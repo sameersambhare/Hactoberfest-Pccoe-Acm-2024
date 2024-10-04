@@ -69,7 +69,7 @@ const Leaderboard = () => {
   const topThree = filteredLeaderboard.slice(0, 3);
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center p-4 sm:p-6">
+    <div className="bg-zinc-950 text-white min-h-screen flex flex-col items-center p-4 sm:p-6">
       {/* Top 3 Users */}
       <div className="flex flex-row justify-center w-full max-w-4xl mb-8">
         {/* Second Rank (Left) */}
