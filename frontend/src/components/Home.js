@@ -54,7 +54,7 @@ const Home = () => {
       <div className="w-full min-h-screen relative">
         <Landing />
         <VideoSection />
-        <Certificate />
+        {/* <Certificate /> */}
         <StarsBackground />
         <ShootingStars />
         <Footer />
