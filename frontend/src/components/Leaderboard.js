@@ -69,7 +69,7 @@ const Leaderboard = () => {
   if (loading) {
     return <div className="text-white">Loading...</div>;
   }
-
+//API CHANGE
   // Get the top three users
   const topThree = filteredLeaderboard.slice(0, 3);
 

@@ -4,6 +4,7 @@ import { LampDemo } from "../components/ui/lamp";
 import { EvervaultCard } from "./ui/evervault-card"; // Import EvervaultCard
 import "./Project.css";
 import { Helmet } from "react-helmet-async";
+//API CHANGE
 // GitHub API base URL for the organization repos
 const GITHUB_API_ORG_URL = "https://api.github.com/orgs/{orgName}/repos";
 
