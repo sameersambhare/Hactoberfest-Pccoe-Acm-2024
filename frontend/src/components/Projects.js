@@ -20,7 +20,11 @@ const Projects = () => {
             "{orgName}",
             "pccoe-acm-hacktoberfest-2023"
           ),
-          {}
+          {
+            headers:{
+              'Authorization': `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`
+            }
+          }
         );
 
         const repos = response.data;
@@ -29,12 +33,20 @@ const Projects = () => {
         const fetchRepoDetails = async (repo) => {
           const pullRequestsResponse = await axios.get(
             `https://api.github.com/repos/${repo.full_name}/pulls`,
-            {}
+            {
+              headers:{
+                'Authorization': `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`
+              }
+            }
           );
 
           const mergedPRResponse = await axios.get(
             `https://api.github.com/repos/${repo.full_name}/pulls?state=closed`,
-            {}
+            {
+              headers:{
+                'Authorization': `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`
+              }
+            }
           );
 
           return {

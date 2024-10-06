@@ -19,10 +19,15 @@ const Leaderboard = () => {
         // Example search query: closed pull requests in repositories of a specific organization
         const response = await axios.get(GITHUB_API_URL, {
           params: {
-            q: `is:pr is:merged org:${orgName}`, // Search for merged PRs within the organization
+            q: `is:pr is:merged org:${orgName} merged:>=2024-10-05`, // Search for PRs merged after 5th Oct 2024
             per_page: 100, // Get 100 results per page
           },
+          headers: {
+            'Authorization': `Bearer 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`
+          }
         });
+        
+        
 
         const prData = response.data.items;
 
