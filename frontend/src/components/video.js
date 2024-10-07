@@ -30,7 +30,7 @@ const VideoSection = () => {
           <h2 className="md:text-5xl text-[3.8vh] font-bold text-white">
             Our Journey in Action
           </h2>
-          <p className="md:text-lg text-gray-300 text-[1.8vh] font-['Space_Mono']">
+          <p className="md:text-lg text-gray-300 text-[1.8vh] tracking-tight font-['Space_Mono']">
             Watch how our community is building, learning, and innovating!
           </p>
         </div>
@@ -40,7 +40,6 @@ const VideoSection = () => {
             <video
               className="w-full h-full md:h-[500px] rounded-lg"
               src="/HacktoberFestVideo.mp4" type="video/mp4" // Correct path reference to the video file
-              controls
               muted
               loop
               autoPlay

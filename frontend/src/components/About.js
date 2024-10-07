@@ -59,7 +59,7 @@ const About = () => {
           href="https://events.mlh.io/events/11753-hacktoberfest-2024-in-pccoe"
         />
       </Helmet>
-      <section className="bg-dark text-green-400 py-16 md:py-20 lg:py-28">
+      <section className="bg-dark text-green-400 py-16 px-6 md:py-20 lg:py-28">
         <div className="container">
           {/* About Hacktoberfest Section */}
           <div className="text-center mb-12">

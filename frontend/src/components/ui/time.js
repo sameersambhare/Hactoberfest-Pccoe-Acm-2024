@@ -23,12 +23,12 @@ const Timeline = ({ data }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10" ref={containerRef}>
+    <div className="w-full  dark:bg-zinc-950 text-white font-sans md:px-10" ref={containerRef}>
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 flex flex-col items-center justify-center">
-  <h2 className="text-2xl font-semibold md:text-4xl mb-4 text-black dark:text-white max-w-4xl text-center">
+  <h2 className="text-2xl font-semibold md:text-4xl mb-4 text-white dark:text-white max-w-4xl text-center">
     Hack. Contribute. Grow
   </h2>
-  <p className="text-neutral-700 dark:text-neutral-300 text-lg md:text-base max-w-sm text-center">
+  <p className="text-neutral-300 text-lg md:text-base max-w-sm text-center">
     Other Events!!! Do Register to other events   
   </p>
 </div>
@@ -50,10 +50,10 @@ const Timeline = ({ data }) => {
               <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
                 {item.eventName}
               </h3>
-              <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-lg">
+              <p className="text-neutral-300 text-sm md:text-[2vw] font-bold max-w-lg">
                 {item.eventTime}
               </p>
-              <p className="text-neutral-700 dark:text-neutral-300 mt-2">
+              <p className=" text-neutral-300 mt-2">
                 {item.eventDescription}
               </p>
               {item.image && (
