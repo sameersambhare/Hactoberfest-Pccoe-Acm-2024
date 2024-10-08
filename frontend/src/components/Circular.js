@@ -21,7 +21,7 @@ const Circular = ({ fv }) => {
         <EffectComposer>
           <Bloom
             mipmapBlur
-            intensity={2.0} // The bloom intensity.
+            intensity={1.0} // The bloom intensity.
             luminanceThreshold={0} // luminance threshold. Raise this value to mask out darker elements in the scene.
             luminanceSmoothing={0} // smoothness of the luminance threshold. Range is [0, 1]
           />

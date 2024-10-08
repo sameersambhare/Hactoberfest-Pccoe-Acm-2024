@@ -46,7 +46,7 @@ export const EvervaultCard = ({
   return (
     <div
       className={cn(
-        "bg-transparent flex items-center justify-center w-full h-full relative px-4",
+        "bg-transparent w-[350px] flex items-center p-2 justify-center h-full relative",
         className
       )}
     >
@@ -60,8 +60,8 @@ export const EvervaultCard = ({
           randomString={randomString}
         />
 
-        <div className="relative z-10 flex flex-col items-center justify-center p-4 text-center px-4">
-          <h2 className="text-white font-bold text-xl sm:text-2xl mb-2">
+        <div className="relative z-10 px-4 gap-4 flex flex-col items-center justify-center py-4 w-full text-center">
+          <h2 className="text-white font-bold text-xl sm:text-2xl mb-2 px-2">
             {text}
           </h2>
           <p className="text-white mb-4 text-sm sm:text-base">

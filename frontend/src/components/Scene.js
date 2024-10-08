@@ -4,7 +4,7 @@ import * as THREE from 'three'
 import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 const Scene = () => {
-    let tex = useTexture('./layer.png')
+    let tex = useTexture('./layer2.png')
     let cyl = useRef()
     useFrame((state, delta) => {
         cyl.current.rotation.y += delta;

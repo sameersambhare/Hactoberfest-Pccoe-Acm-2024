@@ -148,28 +148,24 @@ const Projects = () => {
           href="https://pccoe-acm-hacktoberfest-2024.vercel.app/"
         />
       </Helmet>
-      <div className="w-full min-h-screen relative flex flex-col justify-center items-center">
+      <div className="w-full h-[90vh] relative m-4 flex flex-col justify-center items-center">
         {/* Lamp Demo */}
         <LampDemo />
-
-        {/* Project Cards */}
-        <div className="mt-12 flex gap-6 flex-wrap justify-center space-x-4">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="card w-full sm:w-[300px] h-[400px] md:px-0 mb-4 px-[8vh]"
-            >
-              <EvervaultCard
-                text={`Project: ${project.name}`}
-                forks={`Forks: ${project.forks}`}
-                pullRequests={`PRs: ${project.pullRequests}`}
-                mergedPRs={`Merged PRs: ${project.mergedPullRequests}`}
-                githubLink={project.githubLink}
-                repoDescription={project.repoDescription}
-              />
-            </div>
-          ))}
-        </div>
+      </div>
+      {/* Project Cards */}
+      <div className="w-full min-h-screen px-4 py-8 gap-6 flex flex-wrap">
+        {projects.map((project, index) => (
+          <div key={index} className="card">
+            <EvervaultCard
+              text={`Project: ${project.name}`}
+              forks={`Forks: ${project.forks}`}
+              pullRequests={`PRs: ${project.pullRequests}`}
+              mergedPRs={`Merged PRs: ${project.mergedPullRequests}`}
+              githubLink={project.githubLink}
+              repoDescription={project.repoDescription}
+            />
+          </div>
+        ))}
       </div>
     </>
   );
