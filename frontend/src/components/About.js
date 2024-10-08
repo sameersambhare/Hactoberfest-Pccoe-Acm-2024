@@ -59,7 +59,7 @@ const About = () => {
           href="https://events.mlh.io/events/11753-hacktoberfest-2024-in-pccoe"
         />
       </Helmet>
-      <section className="bg-dark text-green-400 py-16 px-6 md:py-20 lg:py-28">
+      <section className="bg-zinc-950 text-green-400 py-16 px-6 md:py-20 lg:py-28">
         <div className="container">
           {/* About Hacktoberfest Section */}
           <div className="text-center mb-12">
@@ -69,7 +69,7 @@ const About = () => {
             <p className="text-lg text-gray-300">
               Hacktoberfest is open to everyone in our global community. It's a
               month-long celebration of open-source software hosted by
-              DigitalOcean. Hacktoberfest 2023 brings together open-source
+              DigitalOcean. Hacktoberfest 2024 brings together open-source
               enthusiasts, beginners, and the global developer community and
               encourages them to contribute to open-source projects.
             </p>
