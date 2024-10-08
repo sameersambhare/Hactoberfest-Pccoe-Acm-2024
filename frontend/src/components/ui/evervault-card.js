@@ -15,7 +15,15 @@ export const generateRandomString = (length) => {
   return result;
 };
 
-export const EvervaultCard = ({ text, forks, pullRequests, mergedPRs, className }) => {
+export const EvervaultCard = ({
+  text,
+  forks,
+  pullRequests,
+  mergedPRs,
+  className,
+  repoDescription,
+  githubLink,
+}) => {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
 
@@ -30,25 +38,39 @@ export const EvervaultCard = ({ text, forks, pullRequests, mergedPRs, className 
     let { left, top } = currentTarget.getBoundingClientRect();
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
-    
+
     const str = generateRandomString(1500);
     setRandomString(str);
   }
 
   return (
-    <div className={cn("p-0.5 bg-transparent flex items-center justify-center w-full h-full relative", className)}>
+    <div
+      className={cn(
+        "bg-transparent flex items-center justify-center w-full h-full relative px-4",
+        className
+      )}
+    >
       <div
         onMouseMove={onMouseMove}
-        className="group/card rounded-3xl relative overflow-hidden bg-transparent flex flex-col items-center justify-center w-full h-full neon-shadow transition-all duration-300"
+        className="group/card rounded-3xl relative overflow-hidden bg-transparent mx-4 flex flex-col items-center justify-center w-full h-full neon-shadow transition-all duration-300"
       >
-        <CardPattern mouseX={mouseX} mouseY={mouseY} randomString={randomString} />
-        
-        <div className="relative z-10 flex flex-col items-center justify-center p-4 text-center">
-          <h2 className="text-white font-bold text-xl sm:text-2xl mb-2">{text}</h2>
-          <p className="text-white mb-4 text-sm sm:text-base">This is a brief description of the project. It explains what the project does.</p>
-          <a 
-            href="https://github.com/your-repo" 
-            target="_blank" 
+        <CardPattern
+          mouseX={mouseX}
+          mouseY={mouseY}
+          randomString={randomString}
+        />
+
+        <div className="relative z-10 flex flex-col items-center justify-center p-4 text-center px-4">
+          <h2 className="text-white font-bold text-xl sm:text-2xl mb-2">
+            {text}
+          </h2>
+          <p className="text-white mb-4 text-sm sm:text-base">
+            {`This is a brief description of the project. It explains what the
+            project does.` || repoDescription}
+          </p>
+          <a
+            href={githubLink}
+            target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 transition mb-4"
           >
@@ -57,9 +79,18 @@ export const EvervaultCard = ({ text, forks, pullRequests, mergedPRs, className 
 
           {/* Icons Section */}
           <div className="flex space-x-4 mt-4">
-            <IconWrapper icon={<FaCodePullRequest className="h-6 w-6 text-white" />} count={pullRequests} />
-            <IconWrapper icon={<FaCodeMerge className="h-6 w-6 text-white" />} count={mergedPRs} />
-            <IconWrapper icon={<FaCodeFork className="h-6 w-6 text-white" />} count={forks} />
+            <IconWrapper
+              icon={<FaCodePullRequest className="h-6 w-6 text-white" />}
+              count={pullRequests}
+            />
+            <IconWrapper
+              icon={<FaCodeMerge className="h-6 w-6 text-white" />}
+              count={mergedPRs}
+            />
+            <IconWrapper
+              icon={<FaCodeFork className="h-6 w-6 text-white" />}
+              count={forks}
+            />
           </div>
         </div>
       </div>

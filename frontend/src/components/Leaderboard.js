@@ -22,11 +22,9 @@ const Leaderboard = () => {
             per_page: 100, // Get 100 results per page
           },
           headers: {
-            'Authorization': `Bearer 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`
-          }
+            Authorization: `Bearer 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`,
+          },
         });
-        
-        
 
         const prData = response.data.items;
 
@@ -68,7 +66,7 @@ const Leaderboard = () => {
   if (loading) {
     return <div className="text-white">Loading...</div>;
   }
-//API CHANGE
+  //API CHANGE
   // Get the top three users
   const topThree = filteredLeaderboard.slice(0, 3);
 

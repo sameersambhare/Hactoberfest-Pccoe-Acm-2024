@@ -22,9 +22,9 @@ const Projects = () => {
             "pccoe-acm-hacktoberfest-2023"
           ),
           {
-            headers:{
-              'Authorization': `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`
-            }
+            headers: {
+              Authorization: `Bearer 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`,
+            },
           }
         );
 
@@ -32,28 +32,54 @@ const Projects = () => {
 
         // Fetch PR and Fork data for each repository
         const fetchRepoDetails = async (repo) => {
+          const repoLinkResponse = await axios.get(
+            `https://api.github.com/repos/${repo.full_name}`,
+            {
+              headers: {
+                Authorization: `Bearer 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`, // Replace with your token
+              },
+            }
+          );
+          console.log(repoLinkResponse);
+          // Extract the repository URL (html_url) from the response
+          const repoUrl = repoLinkResponse.data.html_url;
+
+          const readmeResponse = await axios.get(
+            `https://api.github.com/repos/${repo.full_name}/readme`,
+            {
+              headers: {
+                Authorization: `Bearer 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`, // Replace with your token
+              },
+            }
+          );
+
+          const readmeContent = atob(readmeResponse.data.content);
+          // console.log("README Content:", readmeContent);
+
           const pullRequestsResponse = await axios.get(
             `https://api.github.com/repos/${repo.full_name}/pulls`,
             {
-              headers:{
-                'Authorization': `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`
-              }
+              headers: {
+                Authorization: `Bearer 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`,
+              },
             }
           );
 
           const mergedPRResponse = await axios.get(
             `https://api.github.com/repos/${repo.full_name}/pulls?state=closed`,
             {
-              headers:{
-                'Authorization': `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`
-              }
+              headers: {
+                Authorization: `Bearer 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`,
+              },
             }
           );
 
           return {
             name: repo.name,
+            githubLink: repoUrl,
             forks: repo.forks_count,
             pullRequests: pullRequestsResponse.data.length,
+            repoDescription: readmeContent,
             mergedPullRequests: mergedPRResponse.data.filter(
               (pr) => pr.merged_at !== null
             ).length,
@@ -138,6 +164,8 @@ const Projects = () => {
                 forks={`Forks: ${project.forks}`}
                 pullRequests={`PRs: ${project.pullRequests}`}
                 mergedPRs={`Merged PRs: ${project.mergedPullRequests}`}
+                githubLink={project.githubLink}
+                repoDescription={project.repoDescription}
               />
             </div>
           ))}
