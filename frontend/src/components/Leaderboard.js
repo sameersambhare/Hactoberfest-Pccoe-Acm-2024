@@ -64,7 +64,7 @@ const Leaderboard = () => {
   );
 
   if (loading) {
-    return <div className="text-white">Loading...</div>;
+    return <div className="text-white pt-[3vw]">Loading...</div>;
   }
   //API CHANGE
   // Get the top three users
