@@ -12,7 +12,7 @@ const Navbar2 = () => {
       <div className="w-full items-center xl:justify-center justify-between py-[1vh] flex gap-12 shadow-green-700 font-['Space_Mono'] text-[#B2D2A8] px-[2vh]">
         <img src={logo} alt="" className="w-[5vh] md:w-[4vw] cursor-pointer" />
         <img
-          src={hacktober}
+          src={"./events/k-removebg-preview.png"}
           alt=""
           className="w-[9vh] md:w-[6vw] cursor-pointer"
         />
