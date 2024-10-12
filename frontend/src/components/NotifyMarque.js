@@ -23,7 +23,7 @@ const NotifyMarque = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="deals w-full flex justify-center items-center gap-[0.5vw]  md:text-[0.9vw] text-[1vh] text-white py-[0.4vw] text-center">
+    <div className="deals w-full flex justify-center items-center gap-[0.5vw]  md:text-[0.9vw] text-[1vh] text-white py-[0.5vh] xl:py-[0.4vw] text-center">
       <img src={starGif} className="xl:w-[1.2vw] w-[2vh]" />
       <p className="capitalize md:font-semibold text-[1.8vh] md:text-[1vw]">
         PCCOE ACM Hacktoberfest is{" "}

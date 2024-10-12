@@ -9,7 +9,7 @@ const Navbar2 = () => {
   return (
     <div className="w-full fixed top-0 left-0 z-[999] bg-black">
       <NotifyMarque />
-      <div className="w-full items-center xl:justify-center justify-between py-[1vh] flex gap-12 shadow-green-700 font-['Space_Mono'] text-[#B2D2A8] px-[2vh]">
+      <div className="w-full items-center xl:justify-center justify-between py-[1vh] xl:py-[1vw] flex gap-12 shadow-green-700 font-['Space_Mono'] text-[#B2D2A8] xl:px-[2vw] px-[2vh]">
         <img src={logo} alt="" className="w-[5vh] md:w-[4vw] cursor-pointer" />
         <img
           src={"./events/k-removebg-preview.png"}
