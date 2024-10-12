@@ -14,7 +14,7 @@ const Navbar2 = () => {
         <img
           src={"./events/k-removebg-preview.png"}
           alt=""
-          className="w-[9vh] md:w-[6vw] cursor-pointer"
+          className="w-[6vh] md:w-[4vw] cursor-pointer"
         />
         <div className="xl:flex gap-12 hidden">
           <ul className="navLinks xl:flex items-center gap-12">
