@@ -13,12 +13,12 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.21.0",
-    "framer-motion": "^11.8.0",
-    "mongoose": "^8.9.5",
-    "nodemailer": "^6.9.15",
-    "nodemon": "^3.1.7",
-    "tailwind-merge": "^2.5.2"
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "framer-motion": "^12.23.26",
+    "mongoose": "^9.0.1",
+    "nodemailer": "^7.0.11",
+    "nodemon": "^3.1.11",
+    "tailwind-merge": "^3.4.0"
   }
 }
